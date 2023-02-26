@@ -64,13 +64,13 @@ const nextStep = () => {
     (x) => x.className === "side-bar_nav current-nav"
   );
 
-  if (currentNavPos === 1) {
-    stepsContainer.style.minHeight = "660px";
-    stepsConHeight();
-    console.log("HI");
-  } else {
-    stepsContainer.style.minHeight = "600px";
-  }
+  // if (currentNavPos === 1) {
+  //   stepsContainer.style.minHeight = "660px";
+  //   // stepsConHeight();
+  //   console.log("HI");
+  // } else {
+  //   stepsContainer.style.minHeight = "100vh";
+  // }
   chosenPlan();
   chosenAddOns();
   finishingUp();
