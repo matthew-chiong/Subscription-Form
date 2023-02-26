@@ -69,7 +69,7 @@ const nextStep = () => {
     stepsConHeight();
     console.log("HI");
   } else {
-    stepsContainer.style.minHeight = "550px";
+    stepsContainer.style.minHeight = "600px";
   }
   chosenPlan();
   chosenAddOns();
