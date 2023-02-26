@@ -75,7 +75,7 @@ body li {
 .steps_container {
   display: flex;
   min-width: 100vw;
-  height: 570px;
+  height: 550px;
   transition: transform 250ms ease;
 }
 .steps {
