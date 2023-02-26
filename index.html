@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Multi-Step Form</title>
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="side-bar_container">
+      <ul id="side-bar">
+        <li class="side-bar_nav current-nav">
+          <button class="side-bar_nav_btn current-btn">1</button>
+          <div class="side-bar_group">
+            <p class="nav_number">STEP 1</p>
+            <p class="nav_info">YOUR INFO</p>
+          </div>
+        </li>
+        <li class="side-bar_nav">
+          <button class="side-bar_nav_btn">2</button>
+          <div class="side-bar_group">
+            <p class="nav_number">STEP 2</p>
+            <p class="nav_info">SELECT PLAN</p>
+          </div>
+        </li>
+        <li class="side-bar_nav">
+          <button class="side-bar_nav_btn">3</button>
+          <div class="side-bar_group">
+            <p class="nav_number">STEP 3</p>
+            <p class="nav_info">ADD-ONS</p>
+          </div>
+        </li>
+        <li class="side-bar_nav">
+          <button class="side-bar_nav_btn">4</button>
+          <div class="side-bar_group">
+            <p class="nav_number">STEP 4</p>
+            <p class="nav_info">SUMMARY</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+      <!--! STEPS CONTAINER -->
+    <main id="main_container">
+      <ul class="steps_container">
+          <!-- FIRST STEP -->
+        <li class="steps first-step current-step">
+              <h2 class="steps_title">Personal Info</h2>
+              <p class="steps_info">Please provide your name, email address, and phone number.</p>
+              <form action="submit" class="my-form"> 
+                <label for="fullName">Name</label>
+                <div class="fullName"><input type="text" id="fullName" name="fullName" placeholder="e.g. Stephen King" required></div>
+                <label for="email">Email Address</label>
+                <div class="email"><input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></div>
+                <label for="phone">Phone Number</label>
+                <div class="phone"><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g. ###-###-####" maxlength="12" required></div>
+              </form>
+        </li>
+          <!-- SECOND STEP -->
+        <li class="steps second-step">
+            <h2 class="steps_title">Select your plan</h2>
+            <p class="steps_info">You have the option of monthly or yearly billing.</p>
+            <ul class="plans_container">
+              <li class="plans active-plan">
+                <img class="plans_icon" src="assets/images/icon-arcade.svg" alt="arcade plan icon">
+                <div>
+                  <p class="plans_title">Arcade</p>
+                  <p class="plans_monthly">$9/mo</p>
+                  <p class="plans_yearly">$90/yr</p>
+                  <p class="plans_yearly_freebie">2 months free</p>
+                </div>
+              </li>
+              <li class="plans">
+                <img class="plans_icon" src="assets/images/icon-advanced.svg" alt="advanced plan icon">
+                <div>
+                <p class="plans_title">Advanced</p>
+                <p class="plans_monthly">$12/mo</p>
+                <p class="plans_yearly">$120/yr</p>
+                <p class="plans_yearly_freebie">2 months free</p>
+                </div>
+              </li>
+              <li class="plans">
+                <img class="plans_icon" src="assets/images/icon-pro.svg" alt="pro plan icon">
+                <div>
+                <p class="plans_title">Pro</p>
+                <p class="plans_monthly">$15/mo</p>
+                <p class="plans_yearly">$150/yr</p>
+                <p class="plans_yearly_freebie">2 months free</p>
+                </div>
+              </li>
+            </ul>
+            <div id="monthly-yearly">
+              <p id="monthly" class="open">Monthly</p>
+              <div id="plans-toggle"></div> 
+              <p id="yearly">Yearly</p>
+            </div>
+        </li>
+          <!-- THIRD STEP -->
+        <li class="steps third-step">
+            <h2 class="steps_title">Pick add-ons</h2>
+            <p class="steps_info">Add-ons help enhance your gaming experience.</p>
+            <ul class="add-ons_container">
+              <li class="add-ons">
+                <label class="check" for="check1">
+                  <input type="checkbox" id="check1">
+                  <div class="add-ons_group">
+                    <p class="add-ons_title">Online service</p>
+                    <p class="add-ons_info">Access to multiplayer games</p>
+                  </div>
+                  <p class="add-ons_monthly_fee">+$1/mo</p>
+                  <p class="add-ons_yearly_fee">+$10/yr</p>
+                </label>
+              </li>
+              <li class="add-ons">
+                <label class="check" for="check2">
+                  <input type="checkbox" id="check2">
+                  <div class="add-ons_group">
+                    <p class="add-ons_title">Larger storage</p>
+                    <p class="add-ons_info">Extra 1TB of cloud save</p>
+                  </div>
+                  <p class="add-ons_monthly_fee">+$2/mo</p>
+                  <p class="add-ons_yearly_fee">+$20/yr</p>
+                </label>
+              </li>
+              <li class="add-ons">
+                <label class="check" for="check3">
+                  <input type="checkbox" id="check3">
+                  <div class="add-ons_group">
+                    <p class="add-ons_title">Customizable Profile</p>
+                    <p class="add-ons_info">Custom theme on your profile</p>
+                  </div>
+                  <p class="add-ons_monthly_fee">+$2/mo</p>
+                  <p class="add-ons_yearly_fee">+$20/yr</p>
+                </label>
+              </li>
+            </ul>
+        </li>
+          <!-- FOURTH STEP -->
+        <li class="steps fourth-step">
+          <h2 class="steps_title">Finishing up</h2>
+          <p class="steps_info">Double-check everything looks OK before confirming.</p>
+          <div id="chosen-plan_wrapper">
+            <div class="change-plan">
+              <p id="chosen-plan">Arcade (Monthly)</p>
+              <a href="" class="change-link">Change</a>
+              <p class="chosen-plan_fee">$9/mo</p>
+            </div>
+            <ul id="chosen-plan_ad-ons_container">
+              <li class="chosen-plan_ad-ons">
+                <p class="chosen-plan_ad-ons_title">Online service</p>
+                <p class="chosen-plan_ad-ons_fee">+$1/mo</p>
+              </li>
+              <li class="chosen-plan_ad-ons">
+                <p class="chosen-plan_ad-ons_title">Larger storage</p>
+                <p class="chosen-plan_ad-ons_fee">+$2/mo</p>
+              </li>
+            </ul>
+          </div>  
+          <div id="checkout_container">
+            <p id="checkout">Total (per month)</p>
+            <p class="checkout-amount">+$12/mo</p>
+          </div>
+        </li>
+          <!-- LAST STEP -->
+        <li class="steps last-step">
+            <img src="assets/images/icon-thank-you.svg" alt="">
+            <h1 id="thank-you">Thank You!</h1>
+            <p id="thank-you_message">Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.</p>
+        </li> 
+      </ul> 
+    </main>
+    <footer id="footer_container">
+      <button id="go-back_btn" onclick="goBack()">Go Back</button>
+      <button id="next-step_btn" onclick="nextStep()" type="submit">Next Step</button>
+   </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html> 
