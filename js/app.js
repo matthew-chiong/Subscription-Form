@@ -3,7 +3,7 @@ const nextStepBtn = document.querySelector("#next-step_btn");
 const prevStepBtn = document.querySelector("#go-back_btn");
 const navBar = document.querySelector("#side-bar");
 const footerCon = document.querySelector("#footer_container");
-alert("salamat");
+
 // if step 1 has current-nav, hide go-back button
 const goBackDisplay = () => {
   if (navBar.firstElementChild.className === "side-bar_nav current-nav") {
@@ -64,13 +64,12 @@ const nextStep = () => {
     (x) => x.className === "side-bar_nav current-nav"
   );
 
-  // if (currentNavPos === 1) {
-  //   stepsContainer.style.minHeight = "660px";
-  //   // stepsConHeight();
-  //   console.log("HI");
-  // } else {
-  //   stepsContainer.style.minHeight = "100vh";
-  // }
+  if (currentNavPos === 1) {
+    stepsContainer.style.minHeight = "calc((100vh + 100px) - 70px)";
+    // stepsConHeight();
+  } else {
+    stepsContainer.style.minHeight = "calc(100vh - 70px)";
+  }
   chosenPlan();
   chosenAddOns();
   finishingUp();
