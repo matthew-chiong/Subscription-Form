@@ -65,7 +65,7 @@ const nextStep = () => {
   );
 
   if (currentNavPos === 1) {
-    stepsContainer.style.minHeight = "calc((100vh + 100px) - 70px)";
+    stepsContainer.style.minHeight = "calc((100vh + 150px) - 70px)";
     // stepsConHeight();
   } else {
     stepsContainer.style.minHeight = "calc(100vh - 70px)";
