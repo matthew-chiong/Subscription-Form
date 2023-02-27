@@ -3,7 +3,7 @@ const nextStepBtn = document.querySelector("#next-step_btn");
 const prevStepBtn = document.querySelector("#go-back_btn");
 const navBar = document.querySelector("#side-bar");
 const footerCon = document.querySelector("#footer_container");
-
+alert("salamat");
 // if step 1 has current-nav, hide go-back button
 const goBackDisplay = () => {
   if (navBar.firstElementChild.className === "side-bar_nav current-nav") {
