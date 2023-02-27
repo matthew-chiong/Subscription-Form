@@ -109,9 +109,9 @@ const goBack = () => {
     (x) => x.className === "side-bar_nav current-nav"
   );
   if (currentNavPos === 1) {
-    stepsContainer.style.height = "660px";
+    stepsContainer.style.minHeight = "calc((100vh + 100px) - 70px)";
   } else {
-    stepsContainer.style.height = "570px";
+    stepsContainer.style.minHeight = "calc(100vh - 70px)";
   }
   if (currentNavPos === 2) {
     packArray[0].addOns = [];
