@@ -171,15 +171,15 @@ const emailValidation = () => {
     phoneValidation();
   }
 };
-const phone = document.querySelector("#phone");
-phone.addEventListener("keyup", (e) => {
-  if (
-    e.key != "Backspace" &&
-    (phone.value.length === 3 || phone.value.length === 7)
-  ) {
-    phone.value += "-";
-  }
-});
+// const phone = document.querySelector("#phone");
+// phone.addEventListener("keyup", (e) => {
+//   if (
+//     e.key != "Backspace" &&
+//     (phone.value.length === 3 || phone.value.length === 7)
+//   ) {
+//     phone.value += "-";
+//   }
+// });
 
 const ifNull = (current, target) => {
   if (target === null || undefined) {
