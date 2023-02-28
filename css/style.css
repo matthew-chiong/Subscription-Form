@@ -648,7 +648,7 @@ input[type="checkbox"]:checked::after {
     padding: 0;
     background-color: white;
     position: absolute;
-    bottom: 2.5%;
+    bottom: 2.4%;
     right: 11%;
   }
 }
