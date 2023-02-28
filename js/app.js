@@ -45,17 +45,6 @@ let totalAmountCalc = [];
 // *!BUTTON FUNCTION -----------------------------------------
 // *! NEXT STEP ----------------------
 
-const stepsConHeight = () => {
-  const media480 = window.matchMedia("(min-width:480px)");
-  const media768 = window.matchMedia("(min-width:768px)");
-  if (media480.matches) {
-    stepsContainer.style.minHeight = "720px";
-  }
-  if (media768.matches) {
-    stepsContainer.style.minHeight = "800px";
-  }
-};
-
 const nextStep = () => {
   nameValidation();
   const currentStep = stepsContainer.querySelector(".current-step");
@@ -66,7 +55,6 @@ const nextStep = () => {
 
   if (currentNavPos === 1) {
     stepsContainer.style.minHeight = "calc((100vh + 100px) - 70px)";
-    // stepsConHeight();
   } else {
     stepsContainer.style.minHeight = "calc(100vh - 70px)";
   }
@@ -76,8 +64,7 @@ const nextStep = () => {
   if (nextStepBtn.innerHTML === "Confirm") {
     nextStepBtn.style.display = "none";
     prevStepBtn.style.display = "none";
-    footerCon.style.backgroundColor = "var(--Magnolia)";
-    navBar.style.display = "none";
+    footerCon.style.backgroundColor = "transparent";
   }
   if (currentNavPos === 3) {
     checkoutFunc();
