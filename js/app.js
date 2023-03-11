@@ -132,10 +132,11 @@ const nameValidation = () => {
   const fullName = document.querySelector("#fullName");
   const fname = document.querySelector(".fullName");
   const fnameAfter = window.getComputedStyle(fname, "::after");
+  const pattern = /^[a-zA-Z]+$/;
 
-  if (fullName.value === "") {
+  if (fullName.value === "" || !fullName.value.match(pattern)) {
     fname.style.setProperty("--display", "block");
-    fname.style.setProperty("--content", '"This field is required"');
+    fname.style.setProperty("--content", '"Name is blank or invalid"');
   } else {
     fname.style.setProperty("--display", "none");
     emailValidation();

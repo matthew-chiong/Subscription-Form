@@ -52,7 +52,7 @@
               <p class="steps_info">Please provide your name, email address, and phone number.</p>
               <form action="submit" class="my-form"> 
                 <label for="fullName">Name</label>
-                <div class="fullName"><input type="text" id="fullName" name="fullName" placeholder="e.g. Stephen King" required></div>
+                <div class="fullName"><input type="text" id="fullName" name="fullName" placeholder="e.g. Stephen King" pattern="[a-zA-Z]+" required></div>
                 <label for="email">Email Address</label>
                 <div class="email"><input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></div>
                 <label for="phone">Phone Number</label>
