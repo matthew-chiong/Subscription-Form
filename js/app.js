@@ -45,6 +45,15 @@ let totalAmountCalc = [];
 // *!BUTTON FUNCTION -----------------------------------------
 // *! NEXT STEP ----------------------
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    // Enter key was pressed
+    nextStep();
+  } else {
+    return;
+  }
+});
+
 const nextStep = () => {
   nameValidation();
   const currentStep = stepsContainer.querySelector(".current-step");
